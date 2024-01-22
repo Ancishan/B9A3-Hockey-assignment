@@ -4,16 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOCKEY</title>
+    <!-- tailwind and daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/860cdc45f9.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <style>
+        .font-manrope{
+            font-family: 'Manrope', sans-serif;
+        }
+      </style>
+
+
 </head>
 <body>
-    <header>
+    <header class="container mx-auto font-manrope">
+        
+        <nav class="  mt-12 font-manrope">
+            <div class="flex justify-between ">
+                <div class="dropdown">
+                    <div tabindex="5" role="button" class="btn bg-black lg:hidden ">
+                        <img class="w-8 h-8" src="./Images/more.png" alt="">
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2  bg-base-100  text-red-700 font-extrabold rounded-box w-52">
+                        <li><a class="hover:text-orange-500 duration-300" href="">Home</a></li>
+                        <li><a class="hover:text-orange-500 duration-300" href="">about</a></li>
+                        <li><a class="hover:text-orange-500 duration-300" href="">Pages</a></li>
+                        <li><a class="hover:text-orange-500 duration-300" href="">Blog</a></li>
+                        <li><a class="hover:text-orange-500 duration-300" href="">Contact</a></li>
+                    </ul>
+                  </div>     
+                <!-- nav left side -->
+                <div class="flex justify-between space-x-48  ">
+                    <div>
+                        <h3 class="text-4xl font-bold">Hockey<span class="text-[#FF4240]">’</span>s</h3>
+                    </div>
+                    
+                        <div class="space-x-11 pl-48 pr-96 items-center font-semibold hidden flex-col md:flex-row lg:flex">
+                            <a class="hover:text-orange-500 duration-300 text-[#FF4240]" href="">Home</a>
+                            <a class="hover:text-orange-500 duration-300 text-[#424247]" href="">about</a>
+                            <a class="hover:text-orange-500 duration-300 text-[#424247]" href="">Services</a>
+                            <a class="hover:text-orange-500 duration-300 text-[#424247]" href="">Blog</a>
+                            <a class="hover:text-orange-500 duration-300 text-[#424247]" href="">Contact</a>
+                        
+                    </div>
+                </div>
+                <!-- nav right side -->
+                <div class="   hidden lg:flex ">
+                    <div class="mt-6 mr-4  ">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div> 
+            </div>
+            <div>
+                <button class="bg-orange-700 text-white  lg: px-6 py-3 rounded-md text-lg font-semibold hover:bg-transparent border-2 border-orange-600 duration-300">Get Ticket</button>
+        </nav>
 
     </header>
-    <main>
-
+    <main class="container mx-auto  font-manrope">
+        <!-- banner section with slider -->
+        <div class="carousel w-full mt-40 mb-24">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="./Images/1.png" class="w-full h-[550px]" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle  bg-black">❮</a> 
+                <a href="#slide2" class="btn btn-circle  bg-black">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="./Images/2.png" class="w-full  h-[550px]"/>
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle bg-black">❮</a> 
+                <a href="#slide1" class="btn btn-circle  bg-black">❯</a>
+              </div>
+            </div> 
+          </div>
     </main>
     <footer>
-        
+        <progress class="progress progress-secondary w-56 rounded" value="70" max="100"></progress>
     </footer>
 </body>
 </html>
