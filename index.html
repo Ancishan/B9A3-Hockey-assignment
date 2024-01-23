@@ -21,7 +21,7 @@
             extend: {
               colors: {
                 clifford: '#da373d',
-                '6': '672px',
+                'primary-color-bg': '#FF4240',
               }
             }
           }
@@ -78,9 +78,10 @@
         </nav>
 
     </header>
-    <main class="container mx-auto  font-manrope">
+    <main class="container mx-auto  font-manrope relative">
         <!-- banner section with slider -->
-        <div class="carousel w-full mt-40 mb-24">
+        <section class="">
+        <div class="carousel w-full mt-40 mb-24 relative lg:relative">
             <div id="slide1" class="carousel-item relative w-full">
               <img src="./Images/1.png" class="w-full h-[550px]" />
               <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -95,7 +96,18 @@
                 <a href="#slide1" class="btn btn-circle  bg-black">❯</a>
               </div>
             </div> 
+              <!-- banner text -->
+          <div class="bg-gray-950 lg:w-1/2 mt-2 mx-0 p-8 rounded-lg lg:absolute lg:bottom-10 lg:right-10">
+            <h3 class="text-lg text-white font-extrabold mb-3">
+                Meet all the heroes from the field
+            </h3>
+            <p class="text-gray-300">
+                The event showcases heroes from a wide range of domains, including
+                science and technology, medicine, arts and entertainment, sports,
+                social activism, and more.
+            </p>
           </div>
+          </section>
           <hr class="border-dotted pb-7">
           <!-- professional section -->
           <div class="text-center ">
@@ -396,8 +408,8 @@
         <!-- input sec  -->
         <div class="flex gap-x-12 flex-col lg:flex-row">
           <!-- leftt side  -->
-          <div>
-           <div class="w-80 h-52 mb-6 bg-[#BCED6D1A]">
+          <div class="sm:ml-8">
+           <div class="w-80 h-52 mb-6 bg-[#BCED6D1A] ">
             <img class="w-12 h-12" src="./Images/Group 1171275317.png" alt="">
             <h3 class="text-[#13131] text-2xl pt-6">Phone Number : <br>
               <span class="text-black font-extrabold">(+62) 123-321-543</span></h3>
@@ -419,36 +431,39 @@
             <div class="flex flex-row gap-x-16 form-control w-full max-w-xs ">
               <div class="space-y-4">
                 <span class="label-text text-[#131318] font-bold text-xl ">Your Name</span>
-                <input type="text" placeholder="Type here" class="input input-bordered w-80 h-16" />
+                <input type="text" placeholder="Type here" class="input input-bordered w-80 h-16 text-xl" />
               </div>
               <div class="space-y-4">
                 <span class="label-text text-[#131318] font-bold text-xl ">Your Email</span>
-                <input type="text" placeholder="Enter your email" class="input input-bordered w-80 h-16" />
+                <input type="text" placeholder="Enter your email" class="input input-bordered w-80 h-16 text-xl" />
 
               </div>
             </div>
             <div class="flex flex-row gap-x-16 mt-12 form-control w-full max-w-xs ">
               <div class="space-y-4">
                 <span class="label-text text-[#131318] font-bold text-xl ">Subject </span>
-                <input type="text" placeholder="Enter your subject" class="input input-bordered w-80 h-16" />
+                <input type="text" placeholder="Enter your subject" class="input input-bordered w-80 h-16 text-xl" />
               </div>
               <div class="space-y-4">
                 <span class="label-text text-[#131318] font-bold text-xl ">Phone Number</span>
-                <input type="text" placeholder="Enter your phone number" class="input input-bordered w-80 h-16" />
+                <input type="text" placeholder="Enter your phone number" class="input input-bordered w-80 h-16 text-xl" />
                 
               </div>
             </div>
             <div class="space-y-4  mt-12">
               <span class="label-text text-[#131318] font-bold text-xl ">Messager</span> <br>
-          <input type="text " placeholder="Write your message" class="input input-bordered w-2/3 h-80"/>
+          <input type="text " placeholder="Write your message" class="input input-bordered w-[700px] h-80 pb-[280px] text-xl"/>
+          <button type="submit"class="btn bg-primary-color-bg text-white mr-5 w-[335px]lg:mr- border-0 w-[700px] h-[57px]">Register Now! </button>
             </div>
           </div>  
          
         </div>
-
-        <div class="pt-32 text-center">
+       </section>
+       <!-- social media section -->
+       <section>
+        <div class="mt-32 mb-24 py-8  h-36 bg-[#13131808] text-center">
           <h2 class="text-[#131318] font-extrabold text-2xl pb-6 ">Social Media</h2>
-          <div class="space-x-7 mb-8">
+          <div class="space-x-7 mb-12">
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-github"></i>
@@ -461,7 +476,36 @@
     </main>
     
 
-    <footer>
+    <footer class="footer pl-36 py-24 bg-black ">
+      <aside>
+       <h3 class="text-[#FFFFFF] font-semibold text-3xl">Get In Touch</h3>
+       <p class="text-[#FFFFFF99] text-2xl pt-4 pb-6">Dit amet consectetur. Condimentum <br> adipiscing aliquam turpis placerat dolor. Purus <br> urna in sit nullam proin. </p>
+       <i class="fa-solid fa-square-envelope w-6 h-6 text-xl text-red-600 pr-6"><span class="pl-5 text-[#FFFFFFCC]">hockeys@support.com</span></i>
+       <i class="fa-solid fa-phone w-6 h-6 text-xl  text-red-600 pr-6"><span class="pl-5 text-[#FFFFFFCC] font-medium">123321543</span></i>
+      </aside> 
+      
+        <nav class=" ">
+          <header class="footer-title text-[#FFFFFF] font-semibold text-3xl">Company</header> 
+          <a class="link link-hover text-[#FFFFFF99]">About</a>
+          <a class="link link-hover text-[#FFFFFF99]">Leadership</a>
+          <a class="link link-hover text-[#FFFFFF99]">Careers</a>
+          <a class="link link-hover text-[#FFFFFF99]">News & Article</a>
+        </nav> 
+        <nav>
+          <header class="footer-title text-[#FFFFFF] font-semibold text-3xl">Support</header>
+          <a class="link link-hover text-[#FFFFFF99]">Help Center</a>
+          <a class="link link-hover text-[#FFFFFF99]">FAQ</a>
+          <a class="link link-hover text-[#FFFFFF99]">Ticket Support</a>
+          <a class="link link-hover text-[#FFFFFF99]">Contact Us</a>
+        </nav>
+        <nav>
+          <header class="footer-title text-[#FFFFFF] font-semibold text-3xl">Services</header> 
+          <a class="link link-hover text-[#FFFFFF99]">Branding</a>
+          <a class="link link-hover text-[#FFFFFF99]">Design</a>
+          <a class="link link-hover text-[#FFFFFF99]">Marketing</a>
+          <a class="link link-hover text-[#FFFFFF99]">Advertisement</a>
+        </nav>
+     
       
     </footer>
 </body>
